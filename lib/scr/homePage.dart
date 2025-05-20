@@ -33,14 +33,13 @@ class _HomepageState extends State<Homepage> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Container(
-                    width: 100, 
-                    height: 100, 
-                    color: Color(0xffffffff)),
+                    child: Image.asset('myapp/assets/image/Logo.png'),
+                    ),
                   SizedBox(
                     width: 100),
                   Column(
                     children: [
-                      Text('Recicle, ganhe recompensas \\n e ajude o planeta',
+                      Text('Recicle, ganhe recompensas e ajude o planeta',
                       style: TextStyle(
                         fontSize: 20
                         ),
