@@ -1,4 +1,7 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
+import 'package:myapp/scr/Login.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -24,7 +27,8 @@ class _HomepageState extends State<Homepage> {
       ),
       body: Container(
         color: Color(0xff1C9328),
-        child: Column(
+        child: SingleChildScrollView(
+          child: Column(
           children: [
             Padding(
               padding: EdgeInsets.only(top: 50),
@@ -32,34 +36,41 @@ class _HomepageState extends State<Homepage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Container(
-                    child: Image.asset('myapp/assets/image/Logo.png'),
-                    ),
-                  SizedBox(
-                    width: 100),
+                  Image.asset('assets/images/Logo.png',
+                  width: 200,
+                  height: 200,
+                  ),
                   Column(
                     children: [
-                      Text('Recicle, ganhe recompensas e ajude o planeta',
+                      Text('Recicle, ganhe recompensas \ne ajude o planeta',
                       style: TextStyle(
-                        fontSize: 20
+                        fontSize: 30,
+                        color: Color(0xffffffff),
                         ),
                       ),
                       Row(
                         children: [
-                          TextButton(
-                            onPressed: (){}, 
-                            child: Text('Começar Agora')),
-
-                          TextButton(
-                            onPressed: (){}, 
-                            child: Text('saiba mais'))
+                          ElevatedButton(
+                            onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => LoginCadastro())
+                            ), 
+                            child: Text('Começar Agora'),
+                            ),
+                          // SizedBox(
+                          //   width: 20
+                          // ),
+                          // ElevatedButton(
+                          //   onPressed: (){}, 
+                          //   child: Text('saiba mais'),
+                          //   )
                         ],
                       )
                     ],
                   )
                 ],
               ),
-            ),
+            ),//
             Padding(
               padding: EdgeInsets.only(top:50),
               child: Row(
@@ -67,9 +78,11 @@ class _HomepageState extends State<Homepage> {
                 mainAxisSize: MainAxisSize.max,
                   children: [
                   Container(
-                    width: 100, 
-                    height: 100, 
-                    color: Color(0xffffffff)),
+                    child: Image.asset('assets/images/PostoDeColetaSeletiva.jpg',
+                    width: 250,
+                    height: 150,
+                    )
+                    ),
                   SizedBox(
                     width: 100),
                   Container(
@@ -108,10 +121,12 @@ class _HomepageState extends State<Homepage> {
             )
           ],
         ),
+        ),
       ),
       bottomNavigationBar: BottomAppBar(
+        height: 50,
          child: SizedBox(
-          height: 50.0,
+          height: 10.0,
           child: Center(
             child: Text(
               '© 2025 Meu Site',
