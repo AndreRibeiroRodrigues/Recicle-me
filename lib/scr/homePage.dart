@@ -1,5 +1,3 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 import 'package:myapp/scr/Login.dart';
 
@@ -14,6 +12,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff1C9328),
       appBar: AppBar(
         backgroundColor: Color(0xff114C10),
         title: Text(
@@ -37,8 +36,8 @@ class _HomepageState extends State<Homepage> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Image.asset('assets/images/Logo.png',
-                  width: 200,
-                  height: 200,
+                  width: 400,
+                  height: 350,
                   ),
                   Column(
                     children: [
@@ -77,12 +76,10 @@ class _HomepageState extends State<Homepage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,
                   children: [
-                  Container(
-                    child: Image.asset('assets/images/PostoDeColetaSeletiva.jpg',
-                    width: 250,
-                    height: 150,
-                    )
-                    ),
+                  Image.asset('assets/images/PostoDeColetaSeletiva.jpg',
+                  width: 250,
+                  height: 150,
+                  ),
                   SizedBox(
                     width: 100),
                   Container(
@@ -104,7 +101,8 @@ class _HomepageState extends State<Homepage> {
                   Text(
                     'Como Funciona',
                     style: TextStyle(
-                      fontSize: 20
+                      fontSize: 30
+
                     ),
                   ),
                   Text('''
@@ -113,7 +111,7 @@ class _HomepageState extends State<Homepage> {
 3. Resgate seus Prêmios: Com os pontos acumulados, você pode escolher entre uma variedade de recompensas incríveis, desde brindes como canecas e ecobags até descontos especiais em produtos e serviços de nossos parceiros.
     ''',
                 style: TextStyle(
-                    fontSize: 14
+                    fontSize: 20
                   ),
                     ),
                 ],
